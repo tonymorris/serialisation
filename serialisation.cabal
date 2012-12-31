@@ -16,12 +16,14 @@ Source-Repository   head
   Type:             git
   Location:         git@github.com:tonymorris/serialisation.git
 
+
 Flag                small_base
   Description:      Choose the new, split-up base package.
 
 Library
   Build-Depends:
                       base < 5 && >= 3
+                      -- https://github.com/tonymorris/type-class
                     , type-class
 
   GHC-Options:
