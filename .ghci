@@ -1,5 +1,5 @@
 :set -isrc
-:l src/Data/Serialisation/Encoder.hs
+:l src/Data/Serialisation.hs
 :m + Test.QuickCheck
 :set prompt ">> "
 :set -Wall

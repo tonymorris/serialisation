@@ -1,0 +1,41 @@
+Name:               serialisation
+Version:            0.0.1
+License:            BSD3
+License-File:       LICENSE
+Author:             Tony Morris <ʇǝu˙sıɹɹoɯʇ@ןןǝʞsɐɥ>
+Maintainer:         Tony Morris
+Copyright:          Tony Morris
+Synopsis:           A serialisation scheme based on argonaut http://argonaut.io/
+Category:           Development
+Description:        A serialisation scheme based on argonaut http://argonaut.io/
+Homepage:           https://github.com/tonymorris/serialisation
+Cabal-Version:      >= 1.6
+Build-Type:         Simple
+
+Source-Repository   head
+  Type:             git
+  Location:         git@github.com:tonymorris/serialisation.git
+
+Flag                small_base
+  Description:      Choose the new, split-up base package.
+
+Library
+  Build-Depends:
+                      base < 5 && >= 3
+                    , type-class
+
+  GHC-Options:
+                    -Wall
+
+  Hs-Source-Dirs:
+                    src
+
+  Exposed-Modules:
+                    Data.Serialisation
+                    Data.Serialisation.Cursor
+                    Data.Serialisation.Decoder
+                    Data.Serialisation.DecodeResult
+                    Data.Serialisation.Encoder
+                    Data.Serialisation.HCursor
+                    Data.Serialisation.History
+
