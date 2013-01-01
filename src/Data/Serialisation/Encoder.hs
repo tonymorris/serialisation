@@ -18,7 +18,7 @@ import Data.Semigroupoid.Right
 import Data.Semigroupoid.Split
 
 
-data Encoder x y =
+newtype Encoder x y =
   Encoder (y -> x)
 
 instance Semigroup x => Semigroup (Encoder x y) where
